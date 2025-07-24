@@ -1,0 +1,56 @@
+(Tool zurücksetzen)
+#5400 = 6
+
+(Unhoming)
+G28.2 X0 Y0 Z0
+
+(Home Z)
+G38.6 P4 Z100 F200
+G38.8 P4 Z-20 F50
+
+(Home X)
+G38.6 x-100 F200
+G38.8 x20 F50
+
+(Home Y)
+G38.6 y-100 F200
+G38.8 y20 F50
+
+G91 G1 X1 Y1 Z-1 F200
+G28.3 x0 y0 Z0
+
+
+G90 G94 (Absolute distance mode; Feed in units per minute)
+G17 (using XY plane)
+G21 (Metric Units)
+
+G92 X-26.431 Y-42.087
+
+G53 G0 Z0
+
+(Change Tool)
+
+G21 (metric units)
+
+G53 G0 Z0(raise the spindle to a height that makes it easy to change the bit)
+
+(G53 G0 X84.3 Y11.6) (make a rapid move to a good place to sit the probe plate)
+
+(MSG, Bitte Fräser wechseln. Vorsicht Fräser darf nicht länger als 60mm sein!) (prompt the user to change the bit and attach the probe)
+
+G91 (put the machine in "incremental distance mode")
+
+F300 (search speed)
+
+G38.2 Z-107 (probe down until the plate is touched or until Z has moved by -60mm)
+
+G0 Z1.5
+F100
+G38.2 Z-2
+
+G92 Z20.005 (sets Z0 = surface table)
+
+G90
+G53 G0 Z0
+
+G53 G0 X0 Y0

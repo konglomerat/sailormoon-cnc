@@ -1,0 +1,4 @@
+G21 (metric)
+G90 (set absolute distance mode)
+G53 G0 X19.667 Y37.44 (move to corner of table)
+G52 X0 Y0 (Zero the offsets for X and Y)

@@ -1,0 +1,6 @@
+(Bitte ausführen zum Initialisieren)
+M0(MSG,Initialisieren Script)
+G53 G0 Z0
+G53 G0 X0 Y0
+(Unhoming)
+G28.2 X0 Y0 Z0

@@ -1,0 +1,420 @@
+{
+  "settings": {
+    "units": "METRIC",
+    "junction-accel": 200000,
+    "max-deviation": 0.05
+  },
+  "motors": [
+    {
+      "max-velocity": 10,
+      "microsteps": 64,
+      "stall-current": 1.5,
+      "drive-current": 6,
+      "axis": "X",
+      "travel-per-rev": 13.716,
+      "stall-sample-time": 200,
+      "zero-backoff": 1,
+      "reverse": false,
+      "min-soft-limit": 0,
+      "homing-mode": "switch-min",
+      "stall-volts": 10,
+      "stall-microstep": 8,
+      "search-velocity": 0.5,
+      "max-jerk": 1500,
+      "enabled": true,
+      "max-accel": 1000,
+      "step-angle": 1.8,
+      "max-soft-limit": 2618.5,
+      "idle-current": 2,
+      "latch-backoff": 20,
+      "latch-velocity": 0.05,
+      "type-of-driver": "internal",
+      "step-length": 2e-06,
+      "homing-mode-external": "manual"
+    },
+    {
+      "max-velocity": 12,
+      "microsteps": 64,
+      "stall-current": 1.5,
+      "drive-current": 6,
+      "axis": "Y",
+      "travel-per-rev": 13.716,
+      "stall-sample-time": 50,
+      "zero-backoff": 1,
+      "reverse": true,
+      "min-soft-limit": 0,
+      "homing-mode": "switch-min",
+      "stall-volts": 12,
+      "stall-microstep": 8,
+      "search-velocity": 0.5,
+      "max-jerk": 1500,
+      "enabled": true,
+      "max-accel": 1000,
+      "step-angle": 1.8,
+      "max-soft-limit": 1330,
+      "idle-current": 2,
+      "latch-backoff": 5,
+      "latch-velocity": 0.05,
+      "type-of-driver": "internal",
+      "step-length": 2e-06,
+      "homing-mode-external": "manual"
+    },
+    {
+      "max-velocity": 2,
+      "microsteps": 16,
+      "stall-current": 1.5,
+      "drive-current": 6,
+      "axis": "Z",
+      "travel-per-rev": 5,
+      "stall-sample-time": 50,
+      "zero-backoff": 1,
+      "reverse": true,
+      "min-soft-limit": -100,
+      "homing-mode": "switch-max",
+      "stall-volts": 12,
+      "stall-microstep": 8,
+      "search-velocity": 0.2,
+      "max-jerk": 1000,
+      "enabled": true,
+      "max-accel": 700,
+      "step-angle": 1.8,
+      "max-soft-limit": 0,
+      "idle-current": 2,
+      "latch-backoff": 20,
+      "latch-velocity": 0.1,
+      "type-of-driver": "internal",
+      "step-length": 2e-06,
+      "homing-mode-external": "manual"
+    },
+    {
+      "max-velocity": 5,
+      "microsteps": 32,
+      "stall-current": 1.5,
+      "drive-current": 6,
+      "axis": "X",
+      "travel-per-rev": 5,
+      "stall-sample-time": 50,
+      "zero-backoff": 1,
+      "reverse": true,
+      "min-soft-limit": 0,
+      "homing-mode": "manual",
+      "stall-volts": 12,
+      "stall-microstep": 8,
+      "search-velocity": 0.5,
+      "max-jerk": 50,
+      "enabled": false,
+      "max-accel": 10,
+      "step-angle": 1.8,
+      "max-soft-limit": 0,
+      "idle-current": 2,
+      "latch-backoff": 5,
+      "latch-velocity": 0.1,
+      "type-of-driver": "internal",
+      "step-length": 2e-06,
+      "homing-mode-external": "manual"
+    }
+  ],
+  "version": "2.0.4",
+  "admin": {
+    "auto-check-upgrade": true,
+    "virtual-keyboard-enabled": true
+  },
+  "input": {
+    "input-lockout": 150,
+    "input-debounce": 5
+  },
+  "pwm-spindle": {
+    "pwm-inverted": false,
+    "pwm-min-duty": 1,
+    "pwm-freq": 1000,
+    "pwm-max-duty": 99.99,
+    "dynamic-power": false,
+    "rapid-auto-off": false
+  },
+  "tool": {
+    "min-spin": 4000,
+    "tool-reversed": false,
+    "tool-type": "OMRON MX2",
+    "dynamic-power": false,
+    "max-spin": 24000,
+    "rapid-auto-off": false
+  },
+  "macros": [
+    {
+      "color": "#E60000",
+      "path": "_Makros/Initialisieren.ngc",
+      "name": "Initialisieren"
+    },
+    {
+      "color": "#FFC80D",
+      "path": "_Makros/Tool1.ngc",
+      "name": "Tool1"
+    },
+    {
+      "color": "#FFC80D",
+      "path": "_Makros/Tool2.ngc",
+      "name": "Tool2"
+    },
+    {
+      "color": "#4893A2",
+      "path": "_Makros/MovetoOffset.nc",
+      "name": "Move to 0 Offset"
+    },
+    {
+      "color": "#A885E6",
+      "path": "_Makros/Pos1_Corner.ngc",
+      "name": "Corner + Zero"
+    }
+  ],
+  "outputs": {},
+  "io-map": [
+    {
+      "mode": "lo-hi",
+      "function": "output-flood"
+    },
+    {
+      "mode": "lo-hi",
+      "function": "output-mist"
+    },
+    {
+      "mode": "normally-closed",
+      "function": "input-motor-0-min"
+    },
+    {
+      "mode": "normally-open",
+      "function": "disabled"
+    },
+    {
+      "mode": "normally-closed",
+      "function": "input-motor-1-min"
+    },
+    {
+      "mode": "normally-open",
+      "function": "disabled"
+    },
+    {
+      "mode": "normally-closed",
+      "function": "input-motor-2-min"
+    },
+    {
+      "mode": "normally-open",
+      "function": "disabled"
+    },
+    {
+      "mode": "normally-closed",
+      "function": "input-motor-3-min"
+    },
+    {
+      "mode": "normally-open",
+      "function": "disabled"
+    },
+    {
+      "mode": "lo-hi",
+      "function": "disabled"
+    },
+    {
+      "mode": "lo-hi",
+      "function": "disabled"
+    },
+    {
+      "mode": "hi-lo",
+      "function": "analog-1"
+    },
+    {
+      "mode": "lo-hi",
+      "function": "output-fault"
+    },
+    {
+      "mode": "normally-closed",
+      "function": "input-probe"
+    },
+    {
+      "mode": "normally-closed",
+      "function": "input-estop"
+    },
+    {
+      "mode": "hi-lo",
+      "function": "analog-0"
+    }
+  ],
+  "switches": {
+    "switch-lockout": 250,
+    "switch-debounce": 5
+  },
+  "gcode": {
+    "tool-change": "(Runs on M6, tool change)\no104 if [#<_selected_tool> NE #5400]\nG53 G0 Z0 (MSG, Achtung - Maschine faehrt jetzt sehr schnell zum Werkzeuglaengensensor!)\nG53 G0 X0 Y0\nM0 M6(DEBUG, Werkzeug#<_selected_tool> kann jetzt eingespannt werden)\n\nM70 (save the current machine state. (e.g. feed rate and units)\n\nG21 (metric units)\n\nG90 (set the machine to \"absolute distance mode\")\n\nG53 G0 Z0(raise the spindle to a height that makes it easy to change the bit)\n\nG91 (put the machine in \"incremental distance mode\")\n\nF300 (search speed)\n\nG38.2 Z-87 (probe down until the plate is touched or until Z has moved by -87mm)\n\nG0 Z5\nF100\nG38.2 Z-6\n\n\n(EDIT HERE: sets Z = surface table)\nG92 Z21.7\n\nG90\nG53 G0 Z0\nM72\no104 endif",
+    "program-end": "(Runs on M2, program end)\nM2",
+    "program-start": "(Runs at program start)\nG90 (Absolute distance mode)\nG17 (Select XY plane)\n\n(if machine is homed, program starts - otherwise homing sequence starts)\no103 if [ [ #<_x_homed>  NE 1] OR [ [ #<_y_homed> NE 1]  OR [ #<_z_homed> NE 1]  ]  ]\n\nM0(MSG,Homing gestartet. Werkzeuglaengensensor freihalten!)\n\n(Tool zur\u00fccksetzen)\n#5400 = 6\n\n(Unhoming)\nG28.2 X0 Y0 Z0\n\n;M0(MSG,Home Z!)\nG38.6 P4 Z100 F200 (seek upward until switch 4 active with error and halt, setting Z-min)\nG38.8 P4 Z-20 F50 (seek downward until switch 4 inactive with error and halt)\n\n;M0(MSG,Home X!)\nG38.6 x-100 F200 (Seek active switch with error and halt)\nG38.8 x20 F50 (Seek inactive switch with error and halt)\n\n;M0(MSG,Home Y!)\nG38.6 y-100 F200\nG38.8 y20 F50\n\nG91 G1 X1 Y1 Z-1 F200 (not sure whats that doing other than adding 1 to each)\nG28.3 X0 Y0 Z0 (set abs position to 0 + marks axes homed)\n\nG90 G94 (Absolute distance mode; Feed in units per minute)\nG17 (using XY plane)\nG21 (Metric Units)\n\n(EDIT HERE: Set coordinates for the \"Ursprung\")\nG92 X-17.1 Y-41.587\n\nG53 G0 Z0 (lift spindle to max)\n;G21 (metric units)\n;G53 G0 Z0\n\nG91 (put the machine in \"incremental distance mode\")\n\n;---Probing routing bit----\nM0(MSG, Achtung! Wird der Sensor getroffen?)\nF300 (search speed)\nG38.2 Z-87 (probe down until the plate is touched or until Z has moved by -87mm)\nG0 Z5 (retract, used to be 1.5)\nF100\nG38.2 Z-6 (probe again slower for 4mm)\n\n(EDIT HERE: sets Z = surface table, bigger value = less distance to table)\nG92 Z21.7\n\nG90 (Absolute distance mode)\nG53 G0 Z0  (lift spindle to max)\nG53 G0 X0 Y0 (move to machine 0)\nM2\n\no103 else\n\n(Machine already homed, start program)\nM0(MSG,Programm gestartet! Bitte bestaetigen)\n\no103 endif"
+  },
+  "modbus-spindle": {
+    "bus-id": 1,
+    "parity": "None",
+    "regs": [
+      {
+        "reg-addr": 4608,
+        "reg-value": 3,
+        "reg-type": "connect-write"
+      },
+      {
+        "reg-addr": 4609,
+        "reg-value": 3,
+        "reg-type": "connect-write"
+      },
+      {
+        "reg-addr": 4611,
+        "reg-value": 40000,
+        "reg-type": "max-freq-fixed"
+      },
+      {
+        "reg-addr": 1,
+        "reg-value": 0,
+        "reg-type": "freq-set"
+      },
+      {
+        "reg-addr": 7936,
+        "reg-value": 0,
+        "reg-type": "stop-write"
+      },
+      {
+        "reg-addr": 7936,
+        "reg-value": 2,
+        "reg-type": "forward-write"
+      },
+      {
+        "reg-addr": 7936,
+        "reg-value": 6,
+        "reg-type": "reverse-write"
+      },
+      {
+        "reg-addr": 4097,
+        "reg-value": 0,
+        "reg-type": "freq-read"
+      },
+      {
+        "reg-addr": 4,
+        "reg-value": 0,
+        "reg-type": "status-read"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 40000,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      },
+      {
+        "reg-addr": 0,
+        "reg-value": 0,
+        "reg-type": "disabled"
+      }
+    ],
+    "baud": "9600",
+    "multi-write": false
+  },
+  "network": {
+    "cors-origins": ""
+  }
+}
