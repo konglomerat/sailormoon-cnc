@@ -25,14 +25,14 @@ All macros assume a Buildbotics controller and LinuxCNC compatibility.
 | [`Tool1.ngc`](macros/Tool1.ngc) | Used for triggering the tool change sequence without doint the whole homing sequence. |
 | [`Tool2.ngc`](macros/Tool1.ngc) | Same as Tool1.ngc, used when Tool1 is already loaded |
 
-## `tool libaries/`
+## `tool_libaries/`
 For Autodesk Fusion we have a bunch of tool libaries containing some of our machining tools and their cutting data presets:
 
 | File             | Description                                                       |
 |------------------|-------------------------------------------------------------------|
-| [`Konglomeratfräser-Holz.tools`](tool libaries/Fusion/Konglomeratfräser-Holz.tools) | All square-profile end mills for wood  |
-| [`Konglomeratfräser-Spezial.tools`](tool libaries/Fusion/Konglomeratfräser-Spezial.tools) | All non-square end mills for wood (Ball nose, corner radius, etc)  |
-| [`Konglomeratfräser-Acryl.tools`](tool libaries/Fusion/Konglomeratfräser-Acryl.tools) | These are our end mills used for acrylic and similar materials |
+| [`Konglomeratfräser-Holz.tools`](tool_libaries/Fusion/Konglomeratfräser-Holz.tools) | All square-profile end mills for wood  |
+| [`Konglomeratfräser-Spezial.tools`](tool_libaries/Fusion/Konglomeratfräser-Spezial.tools) | All non-square end mills for wood (Ball nose, corner radius, etc)  |
+| [`Konglomeratfräser-Acryl.tools`](tool_libaries/Fusion/Konglomeratfräser-Acryl.tools) | These are our end mills used for acrylic and similar materials |
 
 We also used to maintain tool libaries for VCarve, however theyve become obsolete since most of us have been using Fusion for a while now. You can find them [here](tool libaries/VCarve (old)/)
 
