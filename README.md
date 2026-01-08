@@ -30,11 +30,11 @@ For Autodesk Fusion we have a bunch of tool libaries containing some of our mach
 
 | File             | Description                                                       |
 |------------------|-------------------------------------------------------------------|
-| [`Konglomeratfräser-Holz.tools`](tool_libaries/Fusion/Konglomeratfräser-Holz.tools) | All square-profile end mills for wood  |
-| [`Konglomeratfräser-Spezial.tools`](tool_libaries/Fusion/Konglomeratfräser-Spezial.tools) | All non-square end mills for wood (Ball nose, corner radius, etc)  |
-| [`Konglomeratfräser-Acryl.tools`](tool_libaries/Fusion/Konglomeratfräser-Acryl.tools) | These are our end mills used for acrylic and similar materials |
+| [`Konglomeratfräser-Holz.tools`](tool_libaries/Fusion/Konglomeratfräser-Holz.tools) | square-profile end mills for wood  |
+| [`Konglomeratfräser-Spezial.tools`](tool_libaries/Fusion/Konglomeratfräser-Spezial.tools) | non-square end mills for wood (Ball nose, corner radius, etc)  |
+| [`Konglomeratfräser-Acryl.tools`](tool_libaries/Fusion/Konglomeratfräser-Acryl.tools) | end mills for acrylic and similar materials |
 
-We also used to maintain tool libaries for VCarve, however theyve become obsolete since most of us have been using Fusion for a while now. You can find them [here](tool libaries/VCarve (old)/)
+We also used to maintain tool libaries for VCarve, however theyve become obsolete since most of us have been using Fusion for a while now. You can find them [here](tool_libaries/VCarve/)
 
 The single source of truth for our current machining tools is a [google sheet](https://docs.google.com/spreadsheets/d/1YzTxPmGvQnlsPaC_oG6TcLyzMM7FZfQhtsJZIe4CL_E/edit?usp=sharing)
 
